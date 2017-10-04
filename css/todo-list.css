@@ -1,0 +1,78 @@
+
+/*webage reset*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+:root
+{
+  font-family: "Yantramanav", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+button
+{
+  all: unset;
+}
+
+h1
+{
+  display: inline-block;
+  font-size: 18px;
+}
+
+.container {
+  padding-top: 20%;
+}
+
+}
+
+.item-number
+{
+  font-size: 20px;
+  color: rgb(255,69,0);
+}
+
+ul
+{
+  width: 200px;
+  margin: 0 auto 20px;
+  list-style: none;
+}
+
+li
+{
+  display: flex;
+  justify-content: flex-start;
+}
+
+input[type=checkbox]
+{
+  margin-right: 10px;
+
+}
+
+input[type=checkbox]:checked + span
+{
+  text-decoration: line-through;
+  color: rgb(255,69,0);
+}
+
+.delete-item
+{
+  display: block;
+  width: 80px;
+  height: 30px;
+  margin: 20px auto;
+  background: rgb(255,99,71);
+}
+
+.message
+{
+  color: rgb(255,69,0);
+}
