@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Full Screen Landing Page</title>
+    <title>Reach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -18,10 +18,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-</head>
 <body>
+
     <section class="intro">
-        <div class="inner">
+        <div class="inner" img src="pics/background0.jpeg" id="backgroundImage" alt="">
             <div class="content">
             	<!-- Clock -->
                 <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
@@ -30,24 +30,31 @@
 
                 <!-- work -->
                 <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".2s">
-                    <a class="work">Hey let's get to work!</a>
+                    <a class="work">
+                        Hey, let's get to work!
+                    </a>
                 </section>
                 
                 <!-- Submit button -->
+             <!--    <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".3s">
+                    <a href="#!" class="btn waves-effect waves-teal">
+                        Sign Up
+                    </a>
+                    <a href="#!" class="btn waves-effect waves-teal">
+                        Sign in
+                    </a>
+                </section> -->
                 <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".3s">
-                <a href="#!" class="btn waves-effect waves-teal">Sign Up</a>
-                <a href="#!" class="btn waves-effect waves-teal">Sign in</a>
+                    <div class="todo">
+                        <form>
+                            <label id="todo">What do you want to reach?</label>
+                            <input class="input" type="text">
+                            <!-- <input type="submit" value="Add"> -->
+                        </form>
+                        <ul title="Click to delete; drag to reorder">
+                        </ul>
+                    </div>
                 </section>
-
-				<!-- todo list -->
-                <!--<section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".3s">
-                <h1>TODOs</h1>
-					<sub class=item-number></sub>
-					<ul class=list-items></ul>
-					<input class=item>
-					<button class=delete-item>Delete</button>
-				</section> -->
-
 			</div>
 		</div>
     </section>

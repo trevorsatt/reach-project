@@ -1,61 +1,59 @@
-"use strict"
 
-{
-  const $ = (selec) => document.querySelector(selec)
-  const $$ = (selec) => document.querySelectorAll(selec)
+$(document).ready(function($) {
+    $('form').submit(function() {
+        if ($('.input').val() !== '') {
+            var newTask = $('.input').val();
+            var newLi = $('<li>' + "\u2022 " + newTask + '</li>');
+            newLi.on('click', function() {
+                $(this).remove(); // Attach the event handler *before* adding the element
+            });
+            $('ul').prepend(newLi); // To put the new task at the top of the list
+            $('.input').val('');
+            return false; // So the change persists
+        }
+    });
+    $('ul').sortable(); // Because what good is a to-do list that you can't sort? :)
+});
 
-  let $listItems = $(".list-items")
-  let $item = $(".item")
-  let $deleteItem = $(".delete-item")
-  let $itemNumber = $(".item-number")
-  let number = 1
-  $item.placeholder = `Add # ${number}`
+$(document).ready(function(){
+var images = ['pics/background0.jpeg',
+                'pics/background1.jpeg',
+                'pics/background2.jpeg', 
+                'pics/background3.jpeg',
+                'pics/background4.jpeg',
+                'pics/background5.jpeg', 
+                'pics/background6.jpeg',
+                'pics/background8.jpeg',
+                'pics/background9.jpeg',
+                'pics/background10.jpeg'];
 
-  let adder = () => {
-    let $newText = document.createElement("p")
-    $newText.innerHTML = "Please enter some text :)"
-    $newText.classList.add("message")
+var randomNumber = Math.floor(Math.random() * images.length);
+var bgImg = 'url(' + images[randomNumber] + ')';
 
-    let $newItem = document.createElement("li")
-    let $newItemText = document.createElement("span")
-    $newItemText.innerHTML = $item.value
+$('body').css({'background':bgImg, 'background-size':'cover', });
 
-    let $newCheck = document.createElement("input")
-    $newCheck.type = "checkbox"
+});
 
-    let $text = $(".message")
 
-    if ($item.value === "") { 
-      if (!document.body.contains($text)) document.body.appendChild($newText)
-    } else {
-      ++number
-      $newItem.appendChild($newCheck)
-      $newItem.appendChild($newItemText)
-      $listItems.appendChild($newItem)
-      if ($text) document.body.removeChild($text)
-    }
+        // function saveTodos() {
+        //     var str = JSON.stringify(.input);
+        //     localStorage.setItem(".input", str);
+        // }
+        // function getTasks(){
+        //     var str = localStorage.getItem(".input")
+        //     tasks = JSON.parse(str);
+        //     if (!todos) {
+        //         todos = [];
+        //     }
+        // }
 
-    $item.value = ""
-    $item.placeholder = `Add # ${number}`
-    $itemNumber.innerHTML = number - 1
-  }
+        // getTodos();
+        // listTodos();
 
-  let deleter = () => {
-    let $executed = $$("input:checked")
-    $executed.forEach((l) => {
-      let toDel = l.closest("li")
-      $listItems.removeChild(toDel)
-      number -= 1
-    })
 
-    $item.placeholder = `Add # ${number}`
-    if (number > 0) $itemNumber.innerHTML = number - 1
-  }
-
-  $item.addEventListener("keydown", (event) => {
-    if (event.keyCode === 13) return adder()
-  })
-
-  $deleteItem.addEventListener("click", deleter)
-}
-
+//             if (localStorage['.input']) {
+//               var tasks = JSON.parse(localStorage['.input']);
+//                 }
+//             else {
+//                  var tasks = [];
+// };
