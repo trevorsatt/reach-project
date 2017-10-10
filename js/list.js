@@ -1,4 +1,3 @@
-
 $(document).ready(function($) {
     $('form').submit(function() {
         if ($('.input').val() !== '') {
@@ -15,8 +14,10 @@ $(document).ready(function($) {
     $('ul').sortable(); // Because what good is a to-do list that you can't sort? :)
 });
 
+
+// Photo randomizer
 $(document).ready(function(){
-var images = ['pics/background0.jpeg',
+    var images = ['pics/background0.jpeg',
                 'pics/background1.jpeg',
                 'pics/background2.jpeg', 
                 'pics/background3.jpeg',
@@ -33,27 +34,3 @@ var bgImg = 'url(' + images[randomNumber] + ')';
 $('body').css({'background':bgImg, 'background-size':'cover', });
 
 });
-
-
-        // function saveTodos() {
-        //     var str = JSON.stringify(.input);
-        //     localStorage.setItem(".input", str);
-        // }
-        // function getTasks(){
-        //     var str = localStorage.getItem(".input")
-        //     tasks = JSON.parse(str);
-        //     if (!todos) {
-        //         todos = [];
-        //     }
-        // }
-
-        // getTodos();
-        // listTodos();
-
-
-//             if (localStorage['.input']) {
-//               var tasks = JSON.parse(localStorage['.input']);
-//                 }
-//             else {
-//                  var tasks = [];
-// };

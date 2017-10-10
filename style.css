@@ -67,7 +67,12 @@ html, body {
 	opacity: 0.8;
 }
 
-
+.weather {
+	color: white;
+   position: absolute;
+   top: 20px;
+   right: 30px;
+}
 
 
 
