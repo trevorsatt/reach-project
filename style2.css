@@ -62,19 +62,35 @@ html, body {
 
 #todo {
 	color: white;
-	line-height: 70%;
 	text-shadow: 5px 5px 100px #535456;
-	opacity: 0.8;
+    opacity: 0.8;
 }
+
 
 .weather {
 	color: white;
    position: absolute;
-   top: 20px;
-   right: 30px;
+   top: 50px;
+   right: 50px;
 }
 
+tooltip #tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+#tooltip:hover #tooltiptext {
+    visibility: visible;
+}
 
 
 
